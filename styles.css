@@ -146,16 +146,9 @@ section h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   width: 80%;
   margin: auto;
-}
-
-.profile-picture {
-  width: 200px;
-  height: 200px;
-  margin-right: 2rem;
-  border-radius: 50%;
-  border: 2px solid #ddd;
 }
 
 .about-content p {
@@ -163,6 +156,39 @@ section h1 {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #555;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 40px;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.download-cv-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #ff7f50;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color .5s ease;
+}
+
+.download-cv-button i {
+  margin-right: 8px;
+}
+
+.download-cv-button:hover {
+  background-color: #ff4500;
 }
 
 /* Responsive for About Me Section */
