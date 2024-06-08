@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Victor SANTOS</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("active");
+            document.querySelector(".hamburger").classList.toggle("active");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Victor Santos</div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#education">Éducation</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Victor SANTOS</h1>
+            <p>Bienvenue sur mon portfolio ! Je suis Victor Santos, étudiant en BUT Informatique.</p>
+            <br>
+            <a href="#projects" class="hero-button">Voir mes projets</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1>À propos de moi</h1>
+        <div class="about-content">
+            <img src="https://media.licdn.com/dms/image/D4E03AQHNTy6Zz554lw/profile-displayphoto-shrink_800_800/0/1715881706899?e=1723075200&v=beta&t=9FCCTnBXT9wivmeAutwOrIqznU3rFlD1Klse_q9kFE4" alt="Victor Santos" class="profile-picture">
+            <p>Bonjour ! Je suis Victor SANTOS, actuellement en première année de BUT Informatique. Je recherche activement une alternance en développement logiciel pour une durée de 2 ans, commençant dès Septembre 2024. Passionné par la programmation, je maîtrise plusieurs langages dont Python et Java. Motivé, créatif et capable de travailler en équipe, je suis impatient d'appliquer mes compétences et d'en apprendre plus dans votre entreprise.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <h1>Éducation</h1>
+        <div class="timeline">
+            <div class="timeline-event">
+                <div class="timeline-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>BUT Informatique</h3>
+                    <p>Parcours Développement d'applications</p>
+                    <p>IUT de Marne-la-Vallée - Université Gustave Eiffel</p>
+                    <p>09/2023 - Présent</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Baccalauréat Technologique (STI2D)</h3>
+                    <p>Option SIN (Systèmes d'information et numérique)</p>
+                    <p>Lycée Pierre de Coubertin, Meaux</p>
+                    <p>09/2020 - 07/2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <h1>Compétences</h1>
+        <div class="skills-container">
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div class="skill-info">
+                    <h3>Python</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 97%;"></div>
+                    </div>
+                    <p>Langage favori, 4 ans d'expérience</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class="fab fa-java"></i>
+                </div>
+                <div class="skill-info">
+                    <h3>Java</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                    <p>Programmation orientée objet, interfaces graphiques</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="skill-info">
+                    <h3>Web</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <p>HTML 5 / CSS 4 / JavaScript</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="skill-info">
+                    <h3>SQL</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                    <p>MySQL, PostgreSQL - Création, gestion et maintenance des BDD</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class="fab fa-linux"></i>
+                </div>
+                <div class="skill-info">
+                    <h3>Linux</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                    <p>Commandes Linux, Bash et scripting</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class="fab fa-git-alt"></i>
+                </div>
+                <div class="skill-info">
+                    <h3>Git CLI</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 95%;"></div>
+                    </div>
+                    <p>Gestion des versions, commandes (pull, push, merge)</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class="fas fa-c"></i>
+                </div>
+                <div class="skill-info">
+                    <h3>C</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 45%;"></div>
+                    </div>
+                    <p>Pointeurs, structures de données, malloc & free</p>
+                </div>
+            </div>
+        </div>
+        <br><i>+ d'autres en cours d'apprentissage !</i>
+    </section>
+    
+    <section id="experience">
+        <h1>Expérience</h1>
+        <div class="timeline">
+            <div class="timeline-event">
+                <div class="timeline-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Développeur Python</h3>
+                    <p class="timeline-location"><i class="fas fa-location-dot"></i> Freelance</p>
+                    <p class="timeline-date"><i class="fas fa-calendar"></i> 09/2022 - Présent</p>
+                    <p>Développement de solutions personnalisées pour des clients internationaux, y compris des projets de<br>web scraping, des bots Discord et des scripts d'automatisation.</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Stagiaire</h3>
+                    <p class="timeline-location"><i class="fas fa-location-dot"></i> Tipandtool</p>
+                    <p class="timeline-date"><i class="fas fa-calendar"></i> 01/2020</p>
+                    <p>Stage d'observation d'une semaine dans une agence de création web et de communication digitale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h1>Projets</h1>
+        <div class="project-container">
+            <div class="project-box">
+                <img src="https://juegosdelamesaredonda.com/53069-large_default/codex-naturalis.jpg" alt="Image du projet">
+                <h3>Codex Naturalis</h3>
+                <p>Remake du jeu de plateau Codex Naturalis en Java avec la librairie d'interface graphique <a href="https://github.com/forax/zen">Zen5</a>.</p>
+                <a href="https://github.com/JulienS-Code/CodexNaturalis/" class="project-link">Lien du projet</a>
+            </div>
+            <div class="project-box">
+                <img src="https://i.ibb.co/9T1BgjC/fontainebleau-square.jpg" alt="Image du projet">
+                <h3>Projet UNESCO</h3>
+                <p>Site web en partenariat avec l'UNESCO destiné à promouvoir le patrimoine de Fontainebleau.</p>
+                <a href="#" class="project-link">Lien du projet</a>
+            </div>
+        </div>
+        <br><i>+ d'autres en cours de réalisation</i>
+    </section>
+
+    <section id="contact">
+        <h1>Contactez-moi</h1>
+        <p><i class="fas fa-phone-alt"></i> Téléphone: 07 66 22 59 98</p>
+        <p><i class="fas fa-envelope"></i> Email: victor.santos77@pm.me</p>
+        <ul class="socials">
+            <li><a href="https://github.com/xEpsi" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/victorsts" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
