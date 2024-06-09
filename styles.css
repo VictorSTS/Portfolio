@@ -203,7 +203,6 @@ section h1 {
       margin-bottom: 2rem;
   }
 }
-
 /* CSS for the contact section */
 #contact {
   text-align: center;
@@ -295,22 +294,90 @@ section h1 {
   color: #333;
   text-align: center;
 }
-
 .timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.timeline-event {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+  transition: transform 0.3s ease;
+}
+
+.timeline-event:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-icon {
+  font-size: 2em;
+  color: #ff7f50;
+  margin-right: 20px;
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.timeline-content p {
+  margin: 5px 0;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-content p i {
+  margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline-event {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .timeline-icon {
+      margin-bottom: 10px;
+  }
+
+  .timeline-content h3, .timeline-content p {
+      text-align: center;
+  }
+}
+
+.timeline2 {
   position: relative;
   width: 80%;
   margin: auto;
   padding: 2rem 0;
 }
 
-.timeline-event {
+.timeline2-event {
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
   position: relative;
 }
 
-.timeline-event::before {
+.timeline2-event::before {
   content: '';
   position: absolute;
   left: 20px;
@@ -320,7 +387,7 @@ section h1 {
   background: #ccc;
 }
 
-.timeline-icon {
+.timeline2-icon {
   background: #ff6347;
   color: #fff;
   border-radius: 50%;
@@ -334,7 +401,7 @@ section h1 {
   z-index: 1;
 }
 
-.timeline-content {
+.timeline2-content {
   background: #fff;
   padding: 1rem 2rem;
   border-radius: 8px;
@@ -343,19 +410,19 @@ section h1 {
   z-index: 1;
 }
 
-.timeline-content h3 {
+.timeline2-content h3 {
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
   color: #333;
 }
 
-.timeline-date {
+.timeline2-date {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
   color: #aaa;
 }
 
-.timeline-content p {
+.timeline2-content p {
   margin-bottom: 0.5rem;
   font-size: 1rem;
   color: #555;
@@ -363,24 +430,24 @@ section h1 {
 
 /* Responsive for Education Section */
 @media (max-width: 768px) {
-  .timeline-event {
+  .timeline2-event {
       flex-direction: column;
       align-items: flex-start;
   }
 
-  .timeline-event::before {
+  .timeline2-event::before {
       left: 0;
       top: 40px;
       height: 2px;
       width: calc(100% - 40px);
   }
 
-  .timeline-icon {
+  .timeline2-icon {
       margin-right: 0;
       margin-bottom: 1rem;
   }
 
-  .timeline-content {
+  .timeline2-content {
       padding: 1rem;
   }
 }
