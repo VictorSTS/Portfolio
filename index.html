@@ -16,6 +16,24 @@
             document.getElementById("nav-menu").classList.toggle("active");
             document.querySelector(".hamburger").classList.toggle("active");
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.project-carousel');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            
+            if (carousel && prevBtn && nextBtn) {
+                const scrollAmount = 320; // Width of project box + gap
+                
+                prevBtn.addEventListener('click', function() {
+                    carousel.scrollLeft -= scrollAmount;
+                });
+                
+                nextBtn.addEventListener('click', function() {
+                    carousel.scrollLeft += scrollAmount;
+                });
+            }
+        });
     </script>
 </head>
 <body>
@@ -51,7 +69,7 @@
     <section id="about">
         <h1>À propos de moi</h1>
         <div class="about-content">
-            <img src="https://media.licdn.com/dms/image/D4E03AQHNTy6Zz554lw/profile-displayphoto-shrink_800_800/0/1715881706899?e=1723075200&v=beta&t=9FCCTnBXT9wivmeAutwOrIqznU3rFlD1Klse_q9kFE4" alt="Victor Santos" class="profile-picture">
+            <img src="https://i.ibb.co/r2Tmwm0s/vsantos.jpg" alt="Victor Santos" class="profile-picture">
             <p>Bonjour ! Je suis Victor SANTOS, actuellement en première année de BUT Informatique. Je recherche activement une alternance en développement logiciel pour une durée de 2 ans, commençant dès Septembre 2024. Passionné par la programmation, je maîtrise plusieurs langages dont Python et Java. Motivé, créatif et capable de travailler en équipe, je suis impatient d'appliquer mes compétences et d'en apprendre plus dans votre entreprise.</p>
         </div>
         <div class="button-container">
@@ -98,9 +116,6 @@
                 </div>
                 <div class="skill-info">
                     <h3>Python</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 97%;"></div>
-                    </div>
                     <p>Langage favori, 4 ans d'expérience</p>
                 </div>
             </div>
@@ -110,9 +125,6 @@
                 </div>
                 <div class="skill-info">
                     <h3>Linux</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
                     <p>Commandes Linux, Bash et scripting</p>
                 </div>
             </div>
@@ -122,9 +134,6 @@
                 </div>
                 <div class="skill-info">
                     <h3>Java</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
                     <p>Programmation orientée objet, interfaces graphiques</p>
                 </div>
             </div>
@@ -134,9 +143,6 @@
                 </div>
                 <div class="skill-info">
                     <h3>Git CLI</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
                     <p>Gestion des versions, commandes (pull, push, merge)</p>
                 </div>
             </div>
@@ -146,9 +152,6 @@
                 </div>
                 <div class="skill-info">
                     <h3>PHP</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
                     <p>Backend : Sessions, cookies, formulaires</p>
                 </div>
             </div>
@@ -158,9 +161,6 @@
                 </div>
                 <div class="skill-info">
                     <h3>Web</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;"></div>
-                    </div>
                     <p>HTML 5 / CSS 3 / JavaScript</p>
                 </div>
             </div>
@@ -170,9 +170,6 @@
                 </div>
                 <div class="skill-info">
                     <h3>SQL</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;"></div>
-                    </div>
                     <p>MySQL, PostgreSQL - Création, gestion et maintenance</p>
                 </div>
             </div>
@@ -182,9 +179,6 @@
                 </div>
                 <div class="skill-info">
                     <h3>C</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 65%;"></div>
-                    </div>
                     <p>Pointeurs, structures de données, malloc & free</p>
                 </div>
             </div>
@@ -214,7 +208,7 @@
                 <div class="timeline2-content">
                     <h3>Développeur Python</h3>
                     <p class="timeline2-location"><i class="fas fa-location-dot"></i> Freelance</p>
-                    <p class="timeline2-date"><i class="fas fa-calendar"></i> 09/2022 - Présent</p>
+                    <p class="timeline2-date"><i class="fas fa-calendar"></i> 09/2022 - 09/2024</p>
                     <p>Développement de solutions personnalisées pour des clients internationaux, y compris des projets de<br>web scraping, des bots Discord et des scripts d'automatisation.</p>
                 </div>
             </div>
@@ -223,27 +217,83 @@
 
     <section id="projects">
         <h1>Projets</h1>
-        <div class="project-container">
-            <div class="project-box">
-                <img src="https://juegosdelamesaredonda.com/53069-large_default/codex-naturalis.jpg" alt="Image du projet">
-                <h3>Codex Naturalis</h3>
-                <p>Remake du jeu de plateau Codex Naturalis en Java avec la librairie d'interface graphique <a href="https://github.com/forax/zen">Zen5</a>.</p>
-                <a href="https://github.com/JulienS-Code/CodexNaturalis/" class="project-link">Lien du projet</a>
+        <div class="project-carousel-container">
+            <button class="carousel-nav prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="project-carousel">
+                <div class="project-box">
+                    <img src="https://juegosdelamesaredonda.com/53069-large_default/codex-naturalis.jpg" alt="Image du projet">
+                    <div class="project-tags">
+                        <span class="project-tag tag-gerer">Gérer</span>
+                        <span class="project-tag tag-conduire">Conduire</span>
+                        <span class="project-tag tag-optimiser">Optimiser</span>
+                    </div>
+                    <h3>Codex Naturalis</h3>
+                    <p>Remake du jeu de plateau Codex Naturalis en Java avec la librairie d'interface graphique <a href="https://github.com/forax/zen">Zen5</a>.</p>
+                    <a href="https://github.com/JulienS-Code/CodexNaturalis/" class="project-link">
+                        <i class="fab fa-github"></i> Lien du projet
+                    </a>
+                </div>
+                <div class="project-box">
+                    <img src="https://i.ibb.co/9T1BgjC/fontainebleau-square.jpg" alt="Image du projet">
+                    <div class="project-tags">
+                        <span class="project-tag tag-realiser">Réaliser</span>
+                        <span class="project-tag tag-collaborer">Collaborer</span>
+                    </div>
+                    <h3>Projet UNESCO</h3>
+                    <p>Site web en partenariat avec l'UNESCO destiné à promouvoir le patrimoine de Fontainebleau.</p>
+                    <a href="https://github.com/EpsiDEV/SAE-Unesco" class="project-link">
+                        <i class="fab fa-github"></i> Lien du projet
+                    </a>
+                </div>
+                <div class="project-box">
+                    <img src="https://github.com/KirushieldDev/StarTrip/blob/main/assets/logo.jpeg?raw=true" alt="StarTrip Logo">
+                    <div class="project-tags">
+                        <span class="project-tag tag-realiser">Réaliser</span>
+                        <span class="project-tag tag-gerer">Gérer</span>
+                        <span class="project-tag tag-administrer">Administrer</span>
+                    </div>
+                    <h3>StarTrip</h3>
+                    <p>Plateforme de réservation de voyages interplanétaires inspirée de Star Wars, permettant de planifier et réserver des voyages entre différentes planètes de la galaxie.</p>
+                    <a href="https://github.com/KirushieldDev/StarTrip" class="project-link">
+                        <i class="fab fa-github"></i> Lien du projet
+                    </a>
+                </div>
+                <div class="project-box">
+                    <img src="https://i.ibb.co/t1KVqTS/silverlove.png" alt="SilverLove Logo">
+                    <div class="project-tags">
+                        <span class="project-tag tag-realiser">Réaliser</span>
+                        <span class="project-tag tag-gerer">Gérer</span>
+                        <span class="project-tag tag-collaborer">Collaborer</span>
+                    </div>
+                    <h3>SilverLove</h3>
+                    <p>Application de rencontres spécialement conçue pour les personnes âgées, offrant une interface intuitive et des fonctionnalités adaptées pour trouver l'amour à tout âge.</p>
+                    <a href="https://github.com/JulienS-Code/SilverLove" class="project-link">
+                        <i class="fab fa-github"></i> Lien du projet
+                    </a>
+                </div>
+                <div class="project-box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/800px-Wikipedia-logo-v2.svg.png" alt="WikiLinks Logo">
+                    <div class="project-tags">
+                        <span class="project-tag tag-realiser">Réaliser</span>
+                        <span class="project-tag tag-collaborer">Collaborer</span>
+                        <span class="project-tag tag-optimiser">Optimiser</span>
+                    </div>
+                    <h3>WikiLinks</h3>
+                    <p>Jeu multijoueur compétitif où les joueurs s'affrontent dans une course à travers Wikipédia, en naviguant uniquement via les hyperliens pour atteindre leur destination.</p>
+                    <a href="https://github.com/Wedja10/SAE_S4/" class="project-link">
+                        <i class="fab fa-github"></i> Lien du projet
+                    </a>
+                </div>
             </div>
-            <div class="project-box">
-                <img src="https://i.ibb.co/9T1BgjC/fontainebleau-square.jpg" alt="Image du projet">
-                <h3>Projet UNESCO</h3>
-                <p>Site web en partenariat avec l'UNESCO destiné à promouvoir le patrimoine de Fontainebleau.</p>
-                <a href="https://epsidev.github.io/SAE-Unesco/" class="project-link">Lien du projet</a>
-            </div>
+            <button class="carousel-nav next-btn"><i class="fas fa-chevron-right"></i></button>
         </div>
         <br><i>+ d'autres en cours de réalisation</i>
     </section>
 
     <section id="contact">
-        <h1>Contactez-moi</h1>
+        <h1>Me contacter</h1>
         <p><i class="fas fa-phone-alt"></i> Téléphone: 07 66 22 59 98</p>
-        <p><i class="fas fa-envelope"></i> Email: victor.santos77@pm.me</p>
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:victor.santos77@pm.me">victor.santos77@pm.me</a></p>
         <ul class="socials">
             <li><a href="https://github.com/EpsiDEV" target="_blank"><i class="fab fa-github"></i></a></li>
             <li><a href="https://www.linkedin.com/in/victorsts" target="_blank"><i class="fab fa-linkedin"></i></a></li>
