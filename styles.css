@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -284,7 +285,7 @@ section h1 {
 
 /* Education Section */
 #education {
-  padding: 5rem 0;
+  padding: 3rem 0;
   background-color: #f0f0f0;
 }
 
@@ -323,7 +324,8 @@ section h1 {
 .timeline-icon {
   font-size: 2em;
   color: #ff7f50;
-  margin-right: 20px;
+  margin-right: 2rem;
+  margin-left: 1rem;
 }
 
 .timeline-content {
@@ -367,7 +369,11 @@ section h1 {
   position: relative;
   width: 80%;
   margin: auto;
-  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .timeline2-event {
@@ -403,7 +409,7 @@ section h1 {
 
 .timeline2-content {
   background: #fff;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -437,9 +443,9 @@ section h1 {
 
   .timeline2-event::before {
       left: 0;
-      top: 40px;
+      top: 20px;
       height: 2px;
-      width: calc(100% - 40px);
+      width: calc(100% - 20px);
   }
 
   .timeline2-icon {
@@ -454,12 +460,12 @@ section h1 {
 
 /* Skills Section */
 #skills {
-  padding: 5rem 0;
+  padding: 2rem 0;
   background-color: #f9f9f9;
 }
 
 #skills h1 {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-size: 2.5rem;
   color: #333;
   text-align: center;
@@ -469,14 +475,14 @@ section h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   width: 80%;
   margin: auto;
 }
 
 .skill {
   background: #fff;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 1 1 calc(45% - 2rem);
@@ -496,7 +502,6 @@ section h1 {
 }
 
 .skill-info h3 {
-  margin-bottom: 0.5rem;
   font-size: 1.5rem;
   color: #333;
 }
@@ -531,12 +536,13 @@ section h1 {
 
 /* Experience Section */
 #experience {
-  padding: 5rem 0;
+  padding: 2rem 0;
   background-color: #2a2a2a;
   color: #f9f9f9;
 }
 
 #experience h1 {
+  margin-top: 1rem;
   margin-bottom: 3rem;
   font-size: 2.5rem;
   color: #f9f9f9;
@@ -573,65 +579,197 @@ section h1 {
 }
 
 /* Project Container */
-.project-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+.project-carousel-container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
-/* Project Box */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #ff6347;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.carousel-nav:hover {
+    background: #e55337;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+.project-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px 10px;
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #ff6347 #f0f0f0;
+    scroll-behavior: smooth;
+}
+
+.project-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.project-carousel::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+.project-carousel::-webkit-scrollbar-thumb {
+    background-color: #ff6347;
+    border-radius: 4px;
+}
+
 .project-box {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 300px;
-  text-align: left;
-  transition: transform 0.3s, box-shadow 0.3s;
+    flex: 0 0 300px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    height: auto;
+    min-height: 300px;
+    padding: 0 0 20px 0;
 }
 
 .project-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-box img {
   width: 100%;
-  height: auto;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .project-box h3 {
-  margin: 1rem;
-  font-size: 1.5rem;
-  color: #ff6347;
+  font-size: 1.4rem;
+  margin: 10px 15px 5px;
+  color: #333;
 }
 
 .project-box p {
-  margin: 1rem;
+  margin: 0 15px 15px;
   color: #666;
+  flex-grow: 1;
 }
 
 .project-box .project-link {
-  display: block;
-  margin: 1rem;
-  padding: 0.5rem 1rem;
-  background: #ff6347;
+  display: inline-block;
   color: #fff;
-  text-align: center;
+  background-color: #ff6347;
+  padding: 8px 15px;
   border-radius: 5px;
   text-decoration: none;
-  transition: background 0.3s;
+  margin: 0 15px;
+  transition: background-color 0.3s;
+  font-weight: 500;
 }
 
 .project-box .project-link:hover {
-  background: #ff4500;
+  background: #e55337;
+}
+
+/* Project Tags Styles */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 15px 15px 5px;
+    margin-top: 0;
+}
+
+.project-tag {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 20px;
+    color: white;
+    background-color: #888;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.tag-realiser {
+    background-color: #4CAF50;
+}
+
+.tag-gerer {
+    background-color: #2196F3;
+}
+
+.tag-optimiser {
+    background-color: #ff9800;
+}
+
+.tag-conduire {
+    background-color: #9C27B0;
+}
+
+.tag-administrer {
+    background-color: #E91E63;
+}
+
+.tag-collaborer {
+    background-color: #00BCD4;
 }
 
 /* Responsive for Projects Section */
 @media (max-width: 768px) {
-  .project-container {
-      flex-direction: column;
-      align-items: center;
-  }
+    .project-carousel-container {
+        width: 100%;
+        padding: 0 30px;
+    }
+    
+    .carousel-nav {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+    
+    .project-carousel {
+        padding: 15px 5px;
+        gap: 15px;
+    }
+    
+    .project-box {
+        flex: 0 0 250px;
+        min-height: 280px;
+    }
+    
+    .project-box h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-box p {
+        font-size: 0.9rem;
+    }
 }
