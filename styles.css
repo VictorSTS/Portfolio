@@ -584,7 +584,6 @@ section h1 {
     width: 90%;
     margin: 0 auto;
     padding: 0 40px;
-    overflow: hidden; /* Ensure no overflow outside the container */
 }
 
 .carousel-nav {
@@ -619,8 +618,8 @@ section h1 {
 }
 
 .project-carousel {
-    display: flex;
-    flex-direction: row;
+    display: flex !important;
+    flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 20px;
@@ -629,14 +628,6 @@ section h1 {
     scrollbar-width: thin;
     scrollbar-color: #ff6347 #f0f0f0;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap; /* Prevents wrapping */
-    flex-wrap: nowrap !important; /* Forces horizontal layout */
-}
-
-.project-carousel > * {
-    display: inline-block; /* Ensures items stay in a row */
-    white-space: normal; /* Reset white-space for the content */
 }
 
 .project-carousel::-webkit-scrollbar {
@@ -666,7 +657,6 @@ section h1 {
     height: auto;
     min-height: 300px;
     padding: 0 0 20px 0;
-    max-width: 300px; /* Ensure consistent width */
 }
 
 .project-box:hover {
@@ -769,20 +759,12 @@ section h1 {
     .project-carousel {
         padding: 15px 5px;
         gap: 15px;
-        flex-wrap: nowrap; /* Ensure no wrapping on mobile */
+        display: flex;
+        flex-wrap: nowrap;
     }
     
     .project-box {
         flex: 0 0 250px;
         min-height: 280px;
-        max-width: 250px;
-    }
-    
-    .project-box h3 {
-        font-size: 1.2rem;
-    }
-    
-    .project-box p {
-        font-size: 0.9rem;
     }
 }
