@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portfolio - Victor SANTOS</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
@@ -21,6 +22,23 @@
             const carousel = document.querySelector('.project-carousel');
             const prevBtn = document.querySelector('.prev-btn');
             const nextBtn = document.querySelector('.next-btn');
+            const projectBoxes = document.querySelectorAll('.project-box');
+            
+            // Force horizontal layout
+            if (carousel) {
+                carousel.style.display = 'flex';
+                carousel.style.flexDirection = 'row';
+                carousel.style.flexWrap = 'nowrap';
+                
+                // Apply inline styles as fallback for older browsers
+                projectBoxes.forEach(box => {
+                    box.style.display = 'inline-block';
+                    box.style.verticalAlign = 'top';
+                    box.style.width = '300px';
+                    box.style.maxWidth = '300px';
+                    box.style.flex = '0 0 auto';
+                });
+            }
             
             if (carousel && prevBtn && nextBtn) {
                 const scrollAmount = 320; // Width of project box + gap
@@ -33,6 +51,28 @@
                     carousel.scrollLeft += scrollAmount;
                 });
             }
+            
+            // Fix for older browsers: check if horizontal layout is applied
+            setTimeout(function() {
+                const firstBox = document.querySelector('.project-box');
+                const secondBox = document.querySelectorAll('.project-box')[1];
+                
+                if (firstBox && secondBox) {
+                    // Check if boxes are stacked vertically
+                    const isVertical = firstBox.getBoundingClientRect().bottom > secondBox.getBoundingClientRect().top;
+                    
+                    if (isVertical) {
+                        // Force horizontal layout
+                        projectBoxes.forEach((box, index) => {
+                            box.style.position = 'relative';
+                            box.style.left = (index * 320) + 'px';
+                            box.style.marginRight = '20px';
+                        });
+                        
+                        carousel.style.height = '450px';
+                    }
+                }
+            }, 100);
         });
     </script>
 </head>
