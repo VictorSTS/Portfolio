@@ -10,313 +10,254 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         function toggleMenu() {
             document.getElementById("nav-menu").classList.toggle("active");
             document.querySelector(".hamburger").classList.toggle("active");
         }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const carousel = document.querySelector('.project-carousel');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-            
-            if (carousel && prevBtn && nextBtn) {
-                const scrollAmount = 320; // Width of project box + gap
-                
-                prevBtn.addEventListener('click', function() {
-                    carousel.scrollLeft -= scrollAmount;
-                });
-                
-                nextBtn.addEventListener('click', function() {
-                    carousel.scrollLeft += scrollAmount;
-                });
-            }
-        });
     </script>
 </head>
 <body>
+
     <header>
         <nav>
-            <div class="logo">Victor Santos</div>
+            <a href="index.html" class="logo">Victor Santos</a>
             <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
             <ul id="nav-menu">
-                <li><a href="#hero">Accueil</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#education">Éducation</a></li>
-                <li><a href="#skills">Compétences</a></li>
                 <li><a href="#experience">Expérience</a></li>
+                <li><a href="competences.html">Compétences</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Hero -->
     <section id="hero">
         <div class="hero-content">
             <h1>Victor SANTOS</h1>
-            <p>Bienvenue sur mon portfolio ! Je suis Victor SANTOS, étudiant en BUT Informatique.</p>
-            <br>
-            <a href="#projects" class="hero-button">Voir mes projets</a>
+            <p>Étudiant en BUT Informatique — Parcours réalisation d'applications</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                <a href="competences.html" class="btn btn-outline">Mes compétences</a>
+            </div>
         </div>
     </section>
 
+    <!-- À propos -->
     <section id="about">
-        <h1>À propos de moi</h1>
-        <div class="about-content">
-            <img src="https://i.ibb.co/r2Tmwm0s/vsantos.jpg" alt="Victor Santos" class="profile-picture">
-            <p>Bonjour ! Je suis Victor SANTOS, actuellement en première année de BUT Informatique. Je recherche activement une alternance en développement logiciel pour une durée de 1 an, commençant dès Septembre 2025. Passionné par la programmation, je maîtrise plusieurs langages dont Python et Java. Motivé, créatif et capable de travailler en équipe, je suis impatient d'appliquer mes compétences et d'en apprendre plus dans votre entreprise.</p>
-        </div>
-        <div class="button-container">
-            <a href="https://raw.githubusercontent.com/VictorSTS/Portfolio/main/CV.pdf" class="download-cv-button" download>
-                <i class="fas fa-download"></i> Télécharger mon CV
-            </a>
+        <div class="section-inner">
+            <h1>À propos de moi</h1>
+            <div class="about-content">
+                <img src="https://i.ibb.co/r2Tmwm0s/vsantos.jpg" alt="Victor Santos" class="profile-picture">
+                <p>Bonjour ! Je suis Victor SANTOS, actuellement en BUT Informatique parcours réalisation d'applications à l'IUT de Marne-la-Vallée. Je recherche activement une <strong>alternance en développement logiciel</strong> pour une durée de 1 an, débutant en <strong>septembre 2026</strong>. Passionné par la programmation, je maîtrise plusieurs langages dont Python et Java. Motivé, créatif et capable de travailler en équipe, je suis impatient d'appliquer mes compétences et d'en apprendre davantage en entreprise.</p>
+            </div>
+            <div class="button-container">
+                <a href="https://raw.githubusercontent.com/VictorSTS/Portfolio/main/CV.pdf" class="download-cv-button" download>
+                    <i class="fas fa-download"></i> Télécharger mon CV
+                </a>
+            </div>
         </div>
     </section>
-    
+
+    <!-- Éducation -->
     <section id="education">
-        <h1>Éducation</h1>
-        <div class="timeline">
-            <div class="timeline-event">
-                <div class="timeline-icon">
-                    <i class="fas fa-school"></i>
+        <div class="section-inner">
+            <h1>Éducation</h1>
+            <div class="timeline">
+                <div class="timeline-event">
+                    <div class="timeline-icon"><i class="fas fa-school"></i></div>
+                    <div class="timeline-content">
+                        <h3>Baccalauréat Technologique STI2D</h3>
+                        <p><i class="fas fa-circle-info"></i> Option SIN, Mention Bien</p>
+                        <p><i class="fas fa-school"></i> Lycée Pierre de Coubertin, Meaux</p>
+                        <p><i class="fas fa-calendar-alt"></i> 09/2020 – 07/2023</p>
+                    </div>
                 </div>
-                <div class="timeline-content">
-                    <h3>Baccalauréat Technologique STI2D</h3>
-                    <p><i class="fas fa-circle-info"></i> Option SIN, Mention Bien</p>
-                    <p><i class="fas fa-school"></i> Lycée Pierre de Coubertin, Meaux</p>
-                    <p><i class="fas fa-calendar-alt"></i> 09/2020 - 07/2023</p>
-                </div>
-            </div>
-            <div class="timeline-event">
-                <div class="timeline-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="timeline-content">
-                    <h3>BUT Informatique</h3>
-                    <p><i class="fas fa-circle-info"></i> Parcours réalisation d'applications</p>
-                    <p><i class="fas fa-school"></i> IUT de Marne-la-Vallée - Université Gustave Eiffel</p>
-                    <p><i class="fas fa-calendar-alt"></i> 09/2023 - Présent</p>
+                <div class="timeline-event">
+                    <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="timeline-content">
+                        <h3>BUT Informatique</h3>
+                        <p><i class="fas fa-circle-info"></i> Parcours réalisation d'applications</p>
+                        <p><i class="fas fa-school"></i> IUT de Marne-la-Vallée – Université Gustave Eiffel</p>
+                        <p><i class="fas fa-calendar-alt"></i> 09/2023 – Présent</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills">
-        <h1>Compétences</h1>
-        <div class="skills-container">
-            <div class="skill">
-                <div class="skill-icon">
-                    <i class="fab fa-python"></i>
-                </div>
-                <div class="skill-info">
-                    <h3>Python</h3>
-                    <p>Web scraping, automatisation, IA...</p>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-icon">
-                    <i class="fab fa-linux"></i>
-                </div>
-                <div class="skill-info">
-                    <h3>Linux</h3>
-                    <p>Commandes Linux, Bash et scripting</p>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-icon">
-                    <i class="fab fa-java"></i>
-                </div>
-                <div class="skill-info">
-                    <h3>Java</h3>
-                    <p>Programmation orientée objet, interfaces graphiques</p>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-icon">
-                    <i class="fab fa-git-alt"></i>
-                </div>
-                <div class="skill-info">
-                    <h3>Git CLI</h3>
-                    <p>Gestion des versions, commandes (pull, push, merge)</p>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-icon">
-                    <i class="fab fa-react"></i>
-                </div>
-                <div class="skill-info">
-                    <h3>React.js</h3>
-                    <p>Création d'interfaces utilisateur dynamiques et réactives</p>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-icon">
-                    <i class="fas fa-database"></i>
-                </div>
-                <div class="skill-info">
-                    <h3>MongoDB</h3>
-                    <p>Base de données NoSQL, requêtes et agrégations</p>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-icon">
-                    <i class="fab fa-php"></i>
-                </div>
-                <div class="skill-info">
-                    <h3>PHP</h3>
-                    <p>Backend : Sessions, cookies, formulaires</p>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <div class="skill-info">
-                    <h3>Web</h3>
-                    <p>HTML 5 / CSS 3 / JavaScript</p>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-icon">
-                    <i class="fas fa-database"></i>
-                </div>
-                <div class="skill-info">
-                    <h3>SQL</h3>
-                    <p>MySQL, PostgreSQL - Création, gestion et maintenance</p>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-icon">
-                    <i class="fas fa-c"></i>
-                </div>
-                <div class="skill-info">
-                    <h3>C</h3>
-                    <p>Pointeurs, structures de données, malloc & free</p>
-                </div>
-            </div>
-        </div>
-        
-        <br><i>+ d'autres en cours d'apprentissage !</i>
-    </section>
-    
+    <!-- Expérience -->
     <section id="experience">
-        <h1>Expérience</h1>
-        <div class="timeline2">
-            <div class="timeline2-event">
-                <div class="timeline2-icon">
-                    <i class="fas fa-briefcase"></i>
+        <div class="section-inner">
+            <h1>Expérience</h1>
+            <div class="exp-timeline">
+                <div class="exp-item">
+                    <div class="exp-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="exp-content">
+                        <h3>Stagiaire</h3>
+                        <p class="exp-meta"><i class="fas fa-location-dot"></i> Tipandtool &nbsp;·&nbsp; <i class="fas fa-calendar"></i> 01/2020</p>
+                        <p>Stage d'observation d'une semaine dans une agence de création web et de communication digitale.</p>
+                    </div>
                 </div>
-                <div class="timeline2-content">
-                    <h3>Stagiaire</h3>
-                    <p class="timeline2-location"><i class="fas fa-location-dot"></i> Tipandtool</p>
-                    <p class="timeline2-date"><i class="fas fa-calendar"></i> 01/2020</p>
-                    <p>Stage d'observation d'une semaine dans une agence de création web et de communication digitale.</p>
-                </div>
-            </div>
-            <div class="timeline2-event">
-                <div class="timeline2-icon">
-                    <i class="fas fa-briefcase"></i>
-                </div>
-                <div class="timeline2-content">
-                    <h3>Développeur Python</h3>
-                    <p class="timeline2-location"><i class="fas fa-location-dot"></i> Freelance</p>
-                    <p class="timeline2-date"><i class="fas fa-calendar"></i> 09/2022 - 09/2024</p>
-                    <p>Développement de solutions personnalisées pour des clients internationaux, y compris des projets de<br>web scraping, des bots Discord et des scripts d'automatisation.</p>
+                <div class="exp-item">
+                    <div class="exp-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="exp-content">
+                        <h3>Développeur Python</h3>
+                        <p class="exp-meta"><i class="fas fa-location-dot"></i> Freelance &nbsp;·&nbsp; <i class="fas fa-calendar"></i> 09/2022 – 09/2024</p>
+                        <p>Développement de solutions personnalisées pour des clients internationaux : web scraping, bots Discord et scripts d'automatisation.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Compétences techniques -->
+    <section id="skills">
+        <div class="section-inner">
+            <h1>Compétences techniques</h1>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <div class="skill-info"><h3>Python</h3><p>Web scraping, automatisation, IA</p></div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-linux"></i>
+                    <div class="skill-info"><h3>Linux</h3><p>Commandes, Bash, scripting</p></div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-java"></i>
+                    <div class="skill-info"><h3>Java</h3><p>POO, interfaces graphiques</p></div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-git-alt"></i>
+                    <div class="skill-info"><h3>Git CLI</h3><p>Versioning, branches, merge</p></div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <div class="skill-info"><h3>React.js</h3><p>Interfaces dynamiques et réactives</p></div>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <div class="skill-info"><h3>MongoDB</h3><p>NoSQL, requêtes, agrégations</p></div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-php"></i>
+                    <div class="skill-info"><h3>PHP</h3><p>Sessions, cookies, formulaires</p></div>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <div class="skill-info"><h3>Web</h3><p>HTML5 / CSS3 / JavaScript</p></div>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <div class="skill-info"><h3>SQL</h3><p>MySQL, PostgreSQL</p></div>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-c"></i>
+                    <div class="skill-info"><h3>C</h3><p>Pointeurs, structures, mémoire</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets -->
     <section id="projects">
-        <h1>Projets</h1>
-        <div class="project-carousel-container">
-            <button class="carousel-nav prev-btn"><i class="fas fa-chevron-left"></i></button>
-            <div class="project-carousel">
-                <div class="project-box">
-                    <img src="https://juegosdelamesaredonda.com/53069-large_default/codex-naturalis.jpg" alt="Image du projet">
-                    <div class="project-tags">
-                        <span class="project-tag tag-gerer">Gérer</span>
-                        <span class="project-tag tag-conduire">Conduire</span>
-                        <span class="project-tag tag-optimiser">Optimiser</span>
+        <div class="section-inner">
+            <h1>Projets</h1>
+            <p class="section-subtitle">Cliquez sur un projet pour voir le détail des compétences mobilisées</p>
+            <div class="projects-grid">
+
+                <a href="projet-codex.html" class="project-card">
+                    <img src="https://juegosdelamesaredonda.com/53069-large_default/codex-naturalis.jpg" alt="Codex Naturalis">
+                    <div class="project-card-body">
+                        <h3>Codex Naturalis</h3>
+                        <p>Remake du jeu de plateau en Java avec la librairie d'interface graphique Zen5.</p>
+                        <div class="project-tags">
+                            <span class="tag tag-gerer">Gérer</span>
+                            <span class="tag tag-conduire">Conduire</span>
+                            <span class="tag tag-optimiser">Optimiser</span>
+                        </div>
                     </div>
-                    <h3>Codex Naturalis</h3>
-                    <p>Remake du jeu de plateau Codex Naturalis en Java avec la librairie d'interface graphique <a href="https://github.com/forax/zen">Zen5</a>.</p>
-                    <a href="https://github.com/JulienS-Code/CodexNaturalis/" class="project-link">
-                        <i class="fab fa-github"></i> Lien du projet
-                    </a>
-                </div>
-                <div class="project-box">
-                    <img src="https://i.ibb.co/9T1BgjC/fontainebleau-square.jpg" alt="Image du projet">
-                    <div class="project-tags">
-                        <span class="project-tag tag-realiser">Réaliser</span>
-                        <span class="project-tag tag-collaborer">Collaborer</span>
+                </a>
+
+                <a href="projet-unesco.html" class="project-card">
+                    <img src="https://i.ibb.co/9T1BgjC/fontainebleau-square.jpg" alt="Projet UNESCO">
+                    <div class="project-card-body">
+                        <h3>Projet UNESCO</h3>
+                        <p>Site web en partenariat avec l'UNESCO pour promouvoir le patrimoine de Fontainebleau.</p>
+                        <div class="project-tags">
+                            <span class="tag tag-realiser">Réaliser</span>
+                            <span class="tag tag-collaborer">Collaborer</span>
+                        </div>
                     </div>
-                    <h3>Projet UNESCO</h3>
-                    <p>Site web en partenariat avec l'UNESCO destiné à promouvoir le patrimoine de Fontainebleau.</p>
-                    <a href="https://github.com/EpsiDEV/SAE-Unesco" class="project-link">
-                        <i class="fab fa-github"></i> Lien du projet
-                    </a>
-                </div>
-                <div class="project-box">
-                    <img src="https://github.com/KirushieldDev/StarTrip/blob/main/assets/logo.jpeg?raw=true" alt="StarTrip Logo">
-                    <div class="project-tags">
-                        <span class="project-tag tag-realiser">Réaliser</span>
-                        <span class="project-tag tag-gerer">Gérer</span>
-                        <span class="project-tag tag-administrer">Administrer</span>
+                </a>
+
+                <a href="projet-startrip.html" class="project-card">
+                    <img src="https://github.com/KirushieldDev/StarTrip/blob/main/assets/logo.jpeg?raw=true" alt="StarTrip">
+                    <div class="project-card-body">
+                        <h3>StarTrip</h3>
+                        <p>Plateforme de réservation de voyages interplanétaires inspirée de Star Wars.</p>
+                        <div class="project-tags">
+                            <span class="tag tag-realiser">Réaliser</span>
+                            <span class="tag tag-gerer">Gérer</span>
+                            <span class="tag tag-administrer">Administrer</span>
+                        </div>
                     </div>
-                    <h3>StarTrip</h3>
-                    <p>Plateforme de réservation de voyages interplanétaires inspirée de Star Wars, permettant de planifier et réserver des voyages entre différentes planètes de la galaxie.</p>
-                    <a href="https://github.com/KirushieldDev/StarTrip" class="project-link">
-                        <i class="fab fa-github"></i> Lien du projet
-                    </a>
-                </div>
-                <div class="project-box">
-                    <img src="https://i.ibb.co/t1KVqTS/silverlove.png" alt="SilverLove Logo">
-                    <div class="project-tags">
-                        <span class="project-tag tag-realiser">Réaliser</span>
-                        <span class="project-tag tag-gerer">Gérer</span>
-                        <span class="project-tag tag-collaborer">Collaborer</span>
+                </a>
+
+                <a href="projet-silverlove.html" class="project-card">
+                    <img src="https://i.ibb.co/t1KVqTS/silverlove.png" alt="SilverLove">
+                    <div class="project-card-body">
+                        <h3>SilverLove</h3>
+                        <p>Application de rencontres conçue pour les personnes âgées, avec une interface intuitive.</p>
+                        <div class="project-tags">
+                            <span class="tag tag-realiser">Réaliser</span>
+                            <span class="tag tag-gerer">Gérer</span>
+                            <span class="tag tag-collaborer">Collaborer</span>
+                        </div>
                     </div>
-                    <h3>SilverLove</h3>
-                    <p>Application de rencontres spécialement conçue pour les personnes âgées, offrant une interface intuitive et des fonctionnalités adaptées pour trouver l'amour à tout âge.</p>
-                    <a href="https://github.com/JulienS-Code/SilverLove" class="project-link">
-                        <i class="fab fa-github"></i> Lien du projet
-                    </a>
-                </div>
-                <div class="project-box">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/800px-Wikipedia-logo-v2.svg.png" alt="WikiLinks Logo">
-                    <div class="project-tags">
-                        <span class="project-tag tag-realiser">Réaliser</span>
-                        <span class="project-tag tag-collaborer">Collaborer</span>
-                        <span class="project-tag tag-optimiser">Optimiser</span>
+                </a>
+
+                <a href="projet-wikilinks.html" class="project-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/800px-Wikipedia-logo-v2.svg.png" alt="WikiLinks">
+                    <div class="project-card-body">
+                        <h3>WikiLinks</h3>
+                        <p>Jeu multijoueur compétitif : course à travers Wikipédia via les hyperliens.</p>
+                        <div class="project-tags">
+                            <span class="tag tag-realiser">Réaliser</span>
+                            <span class="tag tag-collaborer">Collaborer</span>
+                            <span class="tag tag-optimiser">Optimiser</span>
+                        </div>
                     </div>
-                    <h3>WikiLinks</h3>
-                    <p>Jeu multijoueur compétitif où les joueurs s'affrontent dans une course à travers Wikipédia, en naviguant uniquement via les hyperliens pour atteindre leur destination.</p>
-                    <a href="https://github.com/Wedja10/SAE_S4/" class="project-link">
-                        <i class="fab fa-github"></i> Lien du projet
-                    </a>
-                </div>
+                </a>
+
             </div>
-            <button class="carousel-nav next-btn"><i class="fas fa-chevron-right"></i></button>
         </div>
-        <br><i>+ d'autres en cours de réalisation</i>
     </section>
 
+    <!-- Contact -->
     <section id="contact">
-        <h1>Me contacter</h1>
-        <p><i class="fas fa-phone-alt"></i> Téléphone: 07 66 22 59 98</p>
-        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:victor.santos77@pm.me">victor.santos77@pm.me</a></p>
-        <ul class="socials">
-            <li><a href="https://github.com/EpsiDEV" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/victorsts" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-        </ul>
+        <div class="section-inner">
+            <h1>Me contacter</h1>
+            <p><i class="fas fa-phone-alt"></i> 07 66 22 59 98</p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:victor.santos77@pm.me">victor.santos77@pm.me</a></p>
+            <ul class="socials">
+                <li><a href="https://github.com/EpsiDEV" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/victorsts" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
     </section>
+
+    <footer>
+        <p>&copy; 2025 Victor Santos · <a href="https://github.com/EpsiDEV" target="_blank">GitHub</a></p>
+    </footer>
+
 </body>
 </html>

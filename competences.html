@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences BUT Informatique - Victor SANTOS</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("active");
+            document.querySelector(".hamburger").classList.toggle("active");
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Victor Santos</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#about">À propos</a></li>
+                <li><a href="index.html#education">Éducation</a></li>
+                <li><a href="index.html#experience">Expérience</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="index.html">Accueil</a> <span>›</span> Compétences BUT Informatique
+        </div>
+    </div>
+
+    <section>
+        <div class="section-inner">
+            <h1>Compétences BUT Informatique</h1>
+            <p class="section-subtitle">Parcours réalisation d'applications — 6 compétences, 3 niveaux chacune</p>
+
+            <div class="competences-grid">
+
+                <!-- Réaliser -->
+                <div class="competence-card color-realiser">
+                    <h3><i class="fas fa-code"></i> Réaliser</h3>
+                    <p class="comp-subtitle">Réaliser un développement d'application</p>
+                    <div class="level">
+                        <h4>Niveau 1</h4>
+                        <p>Développer des applications informatiques simples</p>
+                    </div>
+                    <div class="level">
+                        <h4>Niveau 2</h4>
+                        <p>Partir des exigences et aller jusqu'à une application complète</p>
+                    </div>
+                    <div class="level">
+                        <h4>Niveau 3</h4>
+                        <p>Adapter des applications sur un ensemble de supports</p>
+                    </div>
+                </div>
+
+                <!-- Optimiser -->
+                <div class="competence-card color-optimiser">
+                    <h3><i class="fas fa-bolt"></i> Optimiser</h3>
+                    <p class="comp-subtitle">Optimiser des applications informatiques</p>
+                    <div class="level">
+                        <h4>Niveau 1</h4>
+                        <p>Appréhender et construire des algorithmes</p>
+                    </div>
+                    <div class="level">
+                        <h4>Niveau 2</h4>
+                        <p>Sélectionner les algorithmes adéquats pour répondre à un problème donné</p>
+                    </div>
+                    <div class="level">
+                        <h4>Niveau 3</h4>
+                        <p>Analyser et optimiser des applications</p>
+                    </div>
+                </div>
+
+                <!-- Administrer -->
+                <div class="competence-card color-administrer">
+                    <h3><i class="fas fa-server"></i> Administrer</h3>
+                    <p class="comp-subtitle">Administrer des systèmes informatiques communicants complexes</p>
+                    <div class="level">
+                        <h4>Niveau 1</h4>
+                        <p>Installer et configurer un poste de travail</p>
+                    </div>
+                    <div class="level">
+                        <h4>Niveau 2</h4>
+                        <p>Déployer des services dans une architecture réseau</p>
+                    </div>
+                    <div class="level">
+                        <h4>Niveau 3</h4>
+                        <p>Faire évoluer et optimiser l'infrastructure du SI</p>
+                    </div>
+                </div>
+
+                <!-- Gérer -->
+                <div class="competence-card color-gerer">
+                    <h3><i class="fas fa-database"></i> Gérer</h3>
+                    <p class="comp-subtitle">Gérer des données de l'information</p>
+                    <div class="level">
+                        <h4>Niveau 1</h4>
+                        <p>Concevoir et mettre en place une base de données à partir d'un cahier des charges client</p>
+                    </div>
+                    <div class="level">
+                        <h4>Niveau 2</h4>
+                        <p>Optimiser une base de données, interagir avec une application et mettre en œuvre la sécurité des données</p>
+                    </div>
+                    <div class="level">
+                        <h4>Niveau 3</h4>
+                        <p>Administrer une base de données, concevoir et réaliser des systèmes d'informations décisionnels</p>
+                    </div>
+                </div>
+
+                <!-- Conduire -->
+                <div class="competence-card color-conduire">
+                    <h3><i class="fas fa-compass"></i> Conduire</h3>
+                    <p class="comp-subtitle">Conduire un projet</p>
+                    <div class="level">
+                        <h4>Niveau 1</h4>
+                        <p>Identifier les besoins métiers des clients et des utilisateurs</p>
+                    </div>
+                    <div class="level">
+                        <h4>Niveau 2</h4>
+                        <p>Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs</p>
+                    </div>
+                    <div class="level">
+                        <h4>Niveau 3</h4>
+                        <p>Faire évoluer une application existante</p>
+                    </div>
+                </div>
+
+                <!-- Collaborer -->
+                <div class="competence-card color-collaborer">
+                    <h3><i class="fas fa-users"></i> Collaborer</h3>
+                    <p class="comp-subtitle">Travailler dans une équipe informatique</p>
+                    <div class="level">
+                        <h4>Niveau 1</h4>
+                        <p>Identifier ses aptitudes pour travailler dans une équipe</p>
+                    </div>
+                    <div class="level">
+                        <h4>Niveau 2</h4>
+                        <p>Situer son rôle et ses missions au sein d'une équipe informatique</p>
+                    </div>
+                    <div class="level">
+                        <h4>Niveau 3</h4>
+                        <p>Manager une équipe informatique</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Victor Santos · <a href="https://github.com/EpsiDEV" target="_blank">GitHub</a></p>
+    </footer>
+
+</body>
+</html>

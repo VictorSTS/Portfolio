@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex Naturalis - Victor SANTOS</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("active");
+            document.querySelector(".hamburger").classList.toggle("active");
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Victor Santos</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#about">À propos</a></li>
+                <li><a href="index.html#education">Éducation</a></li>
+                <li><a href="index.html#experience">Expérience</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="project-hero">
+        <img src="https://juegosdelamesaredonda.com/53069-large_default/codex-naturalis.jpg" alt="Codex Naturalis">
+        <div class="project-hero-overlay">
+            <h1>Codex Naturalis</h1>
+            <div class="project-tags">
+                <span class="tag tag-gerer">Gérer</span>
+                <span class="tag tag-conduire">Conduire</span>
+                <span class="tag tag-optimiser">Optimiser</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="index.html">Accueil</a> <span>›</span> <a href="index.html#projects">Projets</a> <span>›</span> Codex Naturalis
+        </div>
+    </div>
+
+    <div class="project-detail">
+        <div class="project-detail-inner">
+
+            <h2>Description du projet</h2>
+            <p>Remake du jeu de plateau Codex Naturalis en Java avec la librairie d'interface graphique <strong>Zen5</strong>. Ce projet consistait à reproduire fidèlement les mécaniques du jeu de cartes original : placement de cartes, gestion de ressources, calcul de scores, le tout avec une interface graphique interactive.</p>
+
+            <h2>Technologies utilisées</h2>
+            <div class="tech-list">
+                <span class="tech-badge">Java</span>
+                <span class="tech-badge">Zen5 (GUI)</span>
+                <span class="tech-badge">Git</span>
+            </div>
+
+            <h2>Compétences mobilisées</h2>
+
+            <div class="competence-detail cd-gerer">
+                <h3><i class="fas fa-database"></i> Gérer — Gérer des données de l'information</h3>
+                <div class="level">
+                    <h4>Niveau 1 — Concevoir et mettre en place une base de données à partir d'un cahier des charges client</h4>
+                    <p>Modélisation des données de jeu (cartes, ressources, joueurs) à partir des règles officielles, structuration des données pour représenter l'état du plateau et les scores.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 2 — Optimiser une base de données, interagir avec une application</h4>
+                    <p>Organisation efficace des structures de données pour permettre des recherches rapides de cartes et un calcul de score performant en temps réel pendant la partie.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 3 — Administrer une base de données, concevoir des systèmes d'informations décisionnels</h4>
+                    <p>Mise en place d'un système de persistance des parties permettant la sauvegarde et la reprise de jeu, ainsi que le suivi statistique des scores.</p>
+                </div>
+            </div>
+
+            <div class="competence-detail cd-conduire">
+                <h3><i class="fas fa-compass"></i> Conduire — Conduire un projet</h3>
+                <div class="level">
+                    <h4>Niveau 1 — Identifier les besoins métiers des clients et des utilisateurs</h4>
+                    <p>Analyse des règles du jeu Codex Naturalis pour identifier les fonctionnalités essentielles à implémenter et les attentes des joueurs.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 2 — Appliquer une démarche de suivi de projet</h4>
+                    <p>Planification des sprints de développement, répartition des tâches, suivi de l'avancement avec des jalons clairs (moteur de jeu, interface, tests).</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 3 — Faire évoluer une application existante</h4>
+                    <p>Adaptation du projet initial pour intégrer la bibliothèque graphique Zen5 en remplacement d'une version console, refactoring du code existant.</p>
+                </div>
+            </div>
+
+            <div class="competence-detail cd-optimiser">
+                <h3><i class="fas fa-bolt"></i> Optimiser — Optimiser des applications informatiques</h3>
+                <div class="level">
+                    <h4>Niveau 1 — Appréhender et construire des algorithmes</h4>
+                    <p>Conception d'algorithmes pour la gestion du placement des cartes, la vérification des règles et le calcul des points.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 2 — Sélectionner les algorithmes adéquats pour répondre à un problème donné</h4>
+                    <p>Choix de structures de données adaptées (listes, maps) pour optimiser la recherche de cartes jouables et le calcul de score en complexité raisonnable.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 3 — Analyser et optimiser des applications</h4>
+                    <p>Profilage et optimisation des performances de rendu graphique avec Zen5, réduction de la latence d'affichage lors du rafraîchissement du plateau.</p>
+                </div>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/JulienS-Code/CodexNaturalis/" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github"></i> Voir sur GitHub
+                </a>
+                <a href="index.html#projects" class="btn btn-outline" style="border-color:#333;color:#333;">
+                    <i class="fas fa-arrow-left"></i> Retour aux projets
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Victor Santos · <a href="https://github.com/EpsiDEV" target="_blank">GitHub</a></p>
+    </footer>
+
+</body>
+</html>

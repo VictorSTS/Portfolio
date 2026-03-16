@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SilverLove - Victor SANTOS</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("active");
+            document.querySelector(".hamburger").classList.toggle("active");
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Victor Santos</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#about">À propos</a></li>
+                <li><a href="index.html#education">Éducation</a></li>
+                <li><a href="index.html#experience">Expérience</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="project-hero">
+        <img src="https://i.ibb.co/t1KVqTS/silverlove.png" alt="SilverLove">
+        <div class="project-hero-overlay">
+            <h1>SilverLove</h1>
+            <div class="project-tags">
+                <span class="tag tag-realiser">Réaliser</span>
+                <span class="tag tag-gerer">Gérer</span>
+                <span class="tag tag-collaborer">Collaborer</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="index.html">Accueil</a> <span>›</span> <a href="index.html#projects">Projets</a> <span>›</span> SilverLove
+        </div>
+    </div>
+
+    <div class="project-detail">
+        <div class="project-detail-inner">
+
+            <h2>Description du projet</h2>
+            <p>Application de rencontres spécialement conçue pour les personnes âgées, offrant une interface intuitive et des fonctionnalités adaptées pour trouver l'amour à tout âge. Le projet met l'accent sur l'accessibilité, la simplicité d'utilisation et la sécurité des données personnelles.</p>
+
+            <h2>Technologies utilisées</h2>
+            <div class="tech-list">
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Git</span>
+            </div>
+
+            <h2>Compétences mobilisées</h2>
+
+            <div class="competence-detail cd-realiser">
+                <h3><i class="fas fa-code"></i> Réaliser — Réaliser un développement d'application</h3>
+                <div class="level">
+                    <h4>Niveau 1 — Développer des applications informatiques simples</h4>
+                    <p>Création des pages de profil utilisateur, formulaire d'inscription et système de connexion avec gestion des sessions PHP.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 2 — Partir des exigences et aller jusqu'à une application complète</h4>
+                    <p>Développement de l'application complète : système de matching, messagerie entre utilisateurs, recherche par critères, gestion des préférences.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 3 — Adapter des applications sur un ensemble de supports</h4>
+                    <p>Conception d'une interface adaptée aux seniors avec des tailles de police et boutons agrandis, contraste renforcé, navigation simplifiée et compatible mobile/tablette.</p>
+                </div>
+            </div>
+
+            <div class="competence-detail cd-gerer">
+                <h3><i class="fas fa-database"></i> Gérer — Gérer des données de l'information</h3>
+                <div class="level">
+                    <h4>Niveau 1 — Concevoir et mettre en place une base de données à partir d'un cahier des charges client</h4>
+                    <p>Conception du modèle de données (utilisateurs, profils, préférences, messages) à partir des besoins identifiés, mise en place des tables et relations.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 2 — Optimiser une base de données, interagir avec une application et mettre en œuvre la sécurité des données</h4>
+                    <p>Hashage des mots de passe, requêtes préparées contre les injections SQL, optimisation des requêtes de recherche de profils compatibles.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 3 — Administrer une base de données, concevoir des systèmes d'informations décisionnels</h4>
+                    <p>Mise en place de mécanismes de conformité RGPD pour la gestion des données personnelles sensibles des utilisateurs âgés.</p>
+                </div>
+            </div>
+
+            <div class="competence-detail cd-collaborer">
+                <h3><i class="fas fa-users"></i> Collaborer — Travailler dans une équipe informatique</h3>
+                <div class="level">
+                    <h4>Niveau 1 — Identifier ses aptitudes pour travailler dans une équipe</h4>
+                    <p>Identification de mes forces en développement back-end pour prendre en charge la logique métier et la gestion des données.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 2 — Situer son rôle et ses missions au sein d'une équipe informatique</h4>
+                    <p>Prise en charge du développement back-end et de la base de données, coordination avec les développeurs front-end pour l'intégration.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 3 — Manager une équipe informatique</h4>
+                    <p>Coordination des merges et résolution des conflits Git, aide aux membres moins expérimentés sur les bonnes pratiques de développement.</p>
+                </div>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/JulienS-Code/SilverLove" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github"></i> Voir sur GitHub
+                </a>
+                <a href="index.html#projects" class="btn btn-outline" style="border-color:#333;color:#333;">
+                    <i class="fas fa-arrow-left"></i> Retour aux projets
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Victor Santos · <a href="https://github.com/EpsiDEV" target="_blank">GitHub</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiLinks - Victor SANTOS</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("active");
+            document.querySelector(".hamburger").classList.toggle("active");
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Victor Santos</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#about">À propos</a></li>
+                <li><a href="index.html#education">Éducation</a></li>
+                <li><a href="index.html#experience">Expérience</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="project-hero">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/800px-Wikipedia-logo-v2.svg.png" alt="WikiLinks">
+        <div class="project-hero-overlay">
+            <h1>WikiLinks</h1>
+            <div class="project-tags">
+                <span class="tag tag-realiser">Réaliser</span>
+                <span class="tag tag-collaborer">Collaborer</span>
+                <span class="tag tag-optimiser">Optimiser</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="index.html">Accueil</a> <span>›</span> <a href="index.html#projects">Projets</a> <span>›</span> WikiLinks
+        </div>
+    </div>
+
+    <div class="project-detail">
+        <div class="project-detail-inner">
+
+            <h2>Description du projet</h2>
+            <p>Jeu multijoueur compétitif où les joueurs s'affrontent dans une course à travers Wikipédia, en naviguant uniquement via les hyperliens pour atteindre un article cible. Le jeu met à l'épreuve la culture générale et la capacité de raisonnement des joueurs.</p>
+
+            <h2>Technologies utilisées</h2>
+            <div class="tech-list">
+                <span class="tech-badge">React.js</span>
+                <span class="tech-badge">MongoDB</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">API Wikipédia</span>
+                <span class="tech-badge">Git</span>
+            </div>
+
+            <h2>Compétences mobilisées</h2>
+
+            <div class="competence-detail cd-realiser">
+                <h3><i class="fas fa-code"></i> Réaliser — Réaliser un développement d'application</h3>
+                <div class="level">
+                    <h4>Niveau 1 — Développer des applications informatiques simples</h4>
+                    <p>Création de l'interface de jeu de base avec React : affichage des articles Wikipédia, navigation par hyperliens, compteur de clics.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 2 — Partir des exigences et aller jusqu'à une application complète</h4>
+                    <p>Développement de l'application complète avec système de lobby multijoueur, synchronisation en temps réel, classement et historique des parties.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 3 — Adapter des applications sur un ensemble de supports</h4>
+                    <p>Application React responsive avec interface adaptée au mobile, gestion des interactions tactiles pour la navigation entre articles.</p>
+                </div>
+            </div>
+
+            <div class="competence-detail cd-collaborer">
+                <h3><i class="fas fa-users"></i> Collaborer — Travailler dans une équipe informatique</h3>
+                <div class="level">
+                    <h4>Niveau 1 — Identifier ses aptitudes pour travailler dans une équipe</h4>
+                    <p>Évaluation de mes compétences en React et en intégration d'APIs pour contribuer efficacement au développement front-end du jeu.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 2 — Situer son rôle et ses missions au sein d'une équipe informatique</h4>
+                    <p>Responsabilité du développement de l'interface utilisateur et de l'intégration de l'API Wikipédia, coordination avec l'équipe back-end.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 3 — Manager une équipe informatique</h4>
+                    <p>Animation des réunions de sprint, organisation du workflow Git (branches feature, pull requests, code review) pour l'ensemble de l'équipe.</p>
+                </div>
+            </div>
+
+            <div class="competence-detail cd-optimiser">
+                <h3><i class="fas fa-bolt"></i> Optimiser — Optimiser des applications informatiques</h3>
+                <div class="level">
+                    <h4>Niveau 1 — Appréhender et construire des algorithmes</h4>
+                    <p>Conception de l'algorithme de sélection aléatoire des articles de départ et d'arrivée avec vérification qu'un chemin existe entre eux.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 2 — Sélectionner les algorithmes adéquats pour répondre à un problème donné</h4>
+                    <p>Utilisation d'algorithmes de parcours de graphe (BFS) pour valider l'existence d'un chemin entre deux articles Wikipédia avant le début d'une partie.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 3 — Analyser et optimiser des applications</h4>
+                    <p>Mise en cache des articles Wikipédia consultés pour réduire les appels API, optimisation du rendu React avec mémoïsation des composants lourds.</p>
+                </div>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/Wedja10/SAE_S4/" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github"></i> Voir sur GitHub
+                </a>
+                <a href="index.html#projects" class="btn btn-outline" style="border-color:#333;color:#333;">
+                    <i class="fas fa-arrow-left"></i> Retour aux projets
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Victor Santos · <a href="https://github.com/EpsiDEV" target="_blank">GitHub</a></p>
+    </footer>
+
+</body>
+</html>

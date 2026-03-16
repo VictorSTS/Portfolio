@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarTrip - Victor SANTOS</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("active");
+            document.querySelector(".hamburger").classList.toggle("active");
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Victor Santos</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#about">À propos</a></li>
+                <li><a href="index.html#education">Éducation</a></li>
+                <li><a href="index.html#experience">Expérience</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="project-hero">
+        <img src="https://github.com/KirushieldDev/StarTrip/blob/main/assets/logo.jpeg?raw=true" alt="StarTrip">
+        <div class="project-hero-overlay">
+            <h1>StarTrip</h1>
+            <div class="project-tags">
+                <span class="tag tag-realiser">Réaliser</span>
+                <span class="tag tag-gerer">Gérer</span>
+                <span class="tag tag-administrer">Administrer</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="index.html">Accueil</a> <span>›</span> <a href="index.html#projects">Projets</a> <span>›</span> StarTrip
+        </div>
+    </div>
+
+    <div class="project-detail">
+        <div class="project-detail-inner">
+
+            <h2>Description du projet</h2>
+            <p>Plateforme de réservation de voyages interplanétaires inspirée de l'univers Star Wars. L'application permet aux utilisateurs de planifier et réserver des voyages entre différentes planètes de la galaxie, avec gestion des vaisseaux, des itinéraires et des réservations.</p>
+
+            <h2>Technologies utilisées</h2>
+            <div class="tech-list">
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Git</span>
+            </div>
+
+            <h2>Compétences mobilisées</h2>
+
+            <div class="competence-detail cd-realiser">
+                <h3><i class="fas fa-code"></i> Réaliser — Réaliser un développement d'application</h3>
+                <div class="level">
+                    <h4>Niveau 1 — Développer des applications informatiques simples</h4>
+                    <p>Création des pages de base du site : affichage des planètes, liste des vaisseaux disponibles, formulaire de recherche de voyages.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 2 — Partir des exigences et aller jusqu'à une application complète</h4>
+                    <p>Développement complet de la plateforme avec système d'authentification, gestion des réservations, panier, et espace utilisateur.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 3 — Adapter des applications sur un ensemble de supports</h4>
+                    <p>Interface responsive adaptée aux différents appareils, avec prise en compte des contraintes d'accessibilité et d'ergonomie.</p>
+                </div>
+            </div>
+
+            <div class="competence-detail cd-gerer">
+                <h3><i class="fas fa-database"></i> Gérer — Gérer des données de l'information</h3>
+                <div class="level">
+                    <h4>Niveau 1 — Concevoir et mettre en place une base de données à partir d'un cahier des charges client</h4>
+                    <p>Conception du modèle relationnel (planètes, vaisseaux, utilisateurs, réservations) à partir du cahier des charges, création des tables MySQL.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 2 — Optimiser une base de données, interagir avec une application</h4>
+                    <p>Optimisation des requêtes SQL pour la recherche de voyages, mise en place d'index sur les colonnes fréquemment interrogées, requêtes préparées en PHP.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 3 — Administrer une base de données, concevoir des systèmes d'informations décisionnels</h4>
+                    <p>Gestion des droits d'accès à la base de données, mise en place de procédures de sauvegarde et de scripts de migration pour l'évolution du schéma.</p>
+                </div>
+            </div>
+
+            <div class="competence-detail cd-administrer">
+                <h3><i class="fas fa-server"></i> Administrer — Administrer des systèmes informatiques communicants complexes</h3>
+                <div class="level">
+                    <h4>Niveau 1 — Installer et configurer un poste de travail</h4>
+                    <p>Configuration de l'environnement de développement local (serveur Apache, PHP, MySQL) pour le développement et les tests.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 2 — Déployer des services dans une architecture réseau</h4>
+                    <p>Déploiement de l'application sur un serveur web, configuration du serveur HTTP et de la base de données en production.</p>
+                </div>
+                <div class="level">
+                    <h4>Niveau 3 — Faire évoluer et optimiser l'infrastructure du SI</h4>
+                    <p>Mise en place de HTTPS, gestion des logs serveur et monitoring de la disponibilité de l'application en production.</p>
+                </div>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/KirushieldDev/StarTrip" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github"></i> Voir sur GitHub
+                </a>
+                <a href="index.html#projects" class="btn btn-outline" style="border-color:#333;color:#333;">
+                    <i class="fas fa-arrow-left"></i> Retour aux projets
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Victor Santos · <a href="https://github.com/EpsiDEV" target="_blank">GitHub</a></p>
+    </footer>
+
+</body>
+</html>
