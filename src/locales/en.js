@@ -1,0 +1,21 @@
+export const en = {
+  navTitle: "victor.santos/dev",
+  navContact: "Contact",
+  navCV: "Download CV",
+  heroSubtitle: "Fullstack Developer",
+  heroDescription: "Computer Science student passionate about web and software development. Looking for a 3-year apprenticeship for an engineering degree starting September 2026.",
+  aboutTitle: "About Me",
+  aboutText: "I've been passionate about computer science since a young age...",
+  skillsTitle: "My Skills",
+  educationTitle: "Education",
+  experienceTitle: "Experience",
+  projectsTitle: "Recent Projects",
+  viewProject: "View Project",
+  all: "All",
+  realiser: "Develop",
+  collaborer: "Collaborate",
+  gerer: "Manage",
+  optimiser: "Optimize",
+  administrer: "Administer",
+  conduire: "Lead"
+};
