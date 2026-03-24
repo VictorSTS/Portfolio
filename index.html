@@ -6,6 +6,19 @@
     <meta name="description" content="Portfolio developpeur de Victor Santos - alternance septembre 2026" />
     <title>Victor Santos | Portfolio Développeur</title>
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <script>
+      window.redirectToDistBuild = function redirectToDistBuild() {
+        var path = window.location.pathname;
+
+        if (path.endsWith(".html")) {
+          path = path.slice(0, path.lastIndexOf("/") + 1);
+        } else if (!path.endsWith("/")) {
+          path += "/";
+        }
+
+        window.location.replace(path + "dist/index.html" + window.location.search + window.location.hash);
+      };
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,6 +28,10 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script
+      type="module"
+      src="/src/main.jsx"
+      onerror="window.redirectToDistBuild()"
+    ></script>
   </body>
 </html>
