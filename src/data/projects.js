@@ -1,3 +1,7 @@
+const assetBase = import.meta.env.BASE_URL;
+
+const withAssetBase = (path) => `${assetBase}${path}`;
+
 export const projects = [
   {
     "slug": "projet-unesco",
@@ -9,7 +13,7 @@ export const projects = [
       "fr": "Site web HTML/CSS/JS en partenariat avec l'UNESCO pour la ville de Fontainebleau.",
       "en": "HTML/CSS/JS website in partnership with UNESCO for the city of Fontainebleau."
     },
-    "cover": "/assets/images/fontainebleau-square.jpg",
+    "cover": withAssetBase("assets/images/fontainebleau-square.jpg"),
     "repo": "https://github.com/EpsiDEV/SAE-Unesco",
     "stack": "HTML, CSS, JavaScript, PHP, PostgreSQL",
     "type": {
@@ -70,7 +74,7 @@ export const projects = [
       "fr": "Recréation d'un jeu de plateau complexe en Java avec interface graphique.",
       "en": "Recreation of a complex board game in Java with a graphical interface."
     },
-    "cover": "/assets/images/codex-naturalis.jpg",
+    "cover": withAssetBase("assets/images/codex-naturalis.jpg"),
     "repo": "https://github.com/JulienS-Code/CodexNaturalis/",
     "stack": "Java, Zen5, Git",
     "type": {
@@ -142,7 +146,7 @@ export const projects = [
       "fr": "Plateforme de réservation de voyages interplanétaires inspirée de Star Wars.",
       "en": "Platform for interplanetary travel reservations inspired by Star Wars."
     },
-    "cover": "/assets/images/startrip-logo.jpeg",
+    "cover": withAssetBase("assets/images/startrip-logo.jpeg"),
     "repo": "https://github.com/KirushieldDev/StarTrip",
     "stack": "Web stack, Git",
     "type": {
@@ -203,7 +207,7 @@ export const projects = [
       "fr": "Application de rencontres pensée pour les personnes âgées.",
       "en": "Dating application designed for the elderly."
     },
-    "cover": "/assets/images/silverlove.png",
+    "cover": withAssetBase("assets/images/silverlove.png"),
     "repo": "https://github.com/JulienS-Code/SilverLove",
     "stack": "Web stack, UX, Git",
     "type": {
@@ -264,7 +268,7 @@ export const projects = [
       "fr": "Jeu multijoueur compétitif de navigation via les hyperliens Wikipédia.",
       "en": "Competitive multiplayer navigation game via Wikipedia hyperlinks."
     },
-    "cover": "/assets/images/wikipedia-logo.svg",
+    "cover": withAssetBase("assets/images/wikipedia-logo.svg"),
     "repo": "https://github.com/Wedja10/SAE_S4/",
     "stack": "Web stack, Git",
     "type": {

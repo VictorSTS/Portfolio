@@ -15,6 +15,9 @@ import { projects } from "./data/projects";
 import { useLanguage } from "./i18n/Context";
 
 const outlineBtn = 'border border-default-300/70';
+const assetBase = import.meta.env.BASE_URL;
+const cvUrl = `${assetBase}assets/docs/CV.pdf`;
+const portraitUrl = `${assetBase}assets/images/vsantos.jpg`;
 
 const skillFilters = [
   { key: "all", label: { fr: "Tout", en: "All" } },
@@ -166,7 +169,7 @@ function Header() {
             <Button as={NavLink} to="/competences" variant="light" size="sm" className={outlineBtn}>
               {lang === 'fr' ? 'Compétences' : 'Skills'}
             </Button>
-            <Button as="a" href="/assets/docs/CV.pdf" target="_blank" rel="noreferrer" variant="flat" color="secondary" size="sm" className={outlineBtn}>
+            <Button as="a" href={cvUrl} target="_blank" rel="noreferrer" variant="flat" color="secondary" size="sm" className={outlineBtn}>
               {t('navCV') || "CV"}
             </Button>
           </nav>
@@ -211,7 +214,7 @@ function Hero() {
                 <Button as={Link} to="/projects" color="primary" radius="sm" className={outlineBtn}>
                   {lang === 'fr' ? 'Explorer les projets' : 'Explore projects'}
                 </Button>
-                <Button as="a" href="/assets/docs/CV.pdf" target="_blank" rel="noreferrer" variant="bordered" radius="sm" className={outlineBtn}>
+                <Button as="a" href={cvUrl} target="_blank" rel="noreferrer" variant="bordered" radius="sm" className={outlineBtn}>
                   {lang === 'fr' ? 'Ouvrir le CV' : 'Open CV'}
                 </Button>
               </div>
@@ -219,7 +222,7 @@ function Hero() {
 
             <img
               className="mx-auto h-full max-h-[160px] w-full max-w-[160px] rounded-medium border border-default-200 object-cover"
-              src="/assets/images/vsantos.jpg"
+              src={portraitUrl}
               alt="Victor Santos"
             />
           </div>
