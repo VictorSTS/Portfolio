@@ -18,11 +18,14 @@
 html,
 body,
 #root {
+  width: 100%;
+  max-width: 100%;
   min-height: 100%;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: var(--font-sans);
   background: radial-gradient(1200px 600px at 15% -10%, #102032 0%, #0b0f14 55%, #080b10 100%);
 }

@@ -318,5 +318,66 @@ export const projects = [
         }
       }
     ]
+  },
+  {
+    "slug": "ary-feedback",
+    "title": {
+      "fr": "Ary-Feedback",
+      "en": "Ary-Feedback"
+    },
+    "tagline": {
+      "fr": "Système complet de gestion de formulaires de feedback avec éditeur visuel, logique conditionnelle et analytics.",
+      "en": "A comprehensive feedback form management system with visual editor, conditional logic, and analytics."
+    },
+    "cover": withAssetBase("assets/images/ary-feedback-icon.png"),
+    "repo": "https://github.com/HayroMaki/Ary-Feedback",
+    "stack": "SvelteKit, Svelte Flow, TypeScript",
+    "type": {
+      "fr": "Projet d'équipe",
+      "en": "Team Project"
+    },
+    "team": {
+      "fr": "En équipe",
+      "en": "Team"
+    },
+    "context": {
+      "fr": "Plateforme de création, gestion et déploiement de formulaires complexes avec branching, questions conditionnelles, éditeur node-based et tableau de bord analytique personnalisable.",
+      "en": "Platform to create, manage, and deploy complex survey flows with branching logic, conditional questions, a node-based editor, and a customizable analytics dashboard."
+    },
+    "skills": [
+      {
+        "key": "realiser",
+        "label": {
+          "fr": "Réaliser",
+          "en": "Develop"
+        },
+        "detail": {
+          "fr": "Développement des parcours de formulaires dynamiques avec logique conditionnelle.",
+          "en": "Development of dynamic form flows with conditional logic."
+        }
+      },
+      {
+        "key": "gerer",
+        "label": {
+          "fr": "Gérer",
+          "en": "Manage"
+        },
+        "detail": {
+          "fr": "Structuration des données de réponses et suivi analytique des soumissions.",
+          "en": "Structuring response data and analytics tracking for submissions."
+        }
+      },
+      {
+        "key": "collaborer",
+        "label": {
+          "fr": "Collaborer",
+          "en": "Collaborate"
+        },
+        "detail": {
+          "fr": "Travail en équipe sur l'éditeur visuel et le dashboard personnalisable.",
+          "en": "Team collaboration on the visual editor and customizable dashboard."
+        }
+      }
+    ]
   }
 ];

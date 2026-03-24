@@ -154,12 +154,12 @@ function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-default-200/40 bg-background/95 backdrop-blur">
-      <div className="mx-auto flex w-[min(1120px,92vw)] items-center justify-between py-4">
-        <Link className="rounded-medium border border-default-300 px-3 py-1.5 font-mono text-sm" to="/">
+      <div className="mx-auto flex w-[min(1120px,92vw)] flex-wrap items-center justify-between gap-3 py-4">
+        <Link className="shrink-0 rounded-medium border border-default-300 px-3 py-1.5 font-mono text-sm" to="/">
           {t('navTitle') || "victor.santos/dev"}
         </Link>
-        <div className="flex gap-4 items-center">
-          <nav className="flex items-center gap-2" aria-label="Navigation principale">
+        <div className="flex min-w-0 flex-1 items-center justify-end gap-2 sm:gap-4">
+          <nav className="flex min-w-0 max-w-full items-center gap-2 overflow-x-auto whitespace-nowrap pr-1" aria-label="Navigation principale">
             <Button as={NavLink} to="/" end variant="light" size="sm" className={outlineBtn}>
               {lang === 'fr' ? 'Accueil' : 'Home'}
             </Button>
@@ -174,6 +174,7 @@ function Header() {
             </Button>
           </nav>
           <Button
+            className="shrink-0"
             size="sm"
             variant="flat"
             onPress={() => setLang(lang === "fr" ? "en" : "fr")}
