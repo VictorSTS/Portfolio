@@ -1,7 +1,5 @@
 # Portfolio de Victor Santos
 
-Portfolio React en francais, oriente candidature alternance (septembre 2026), avec UI theme developpeur.
-
 ## Stack
 
 - React 18
@@ -12,15 +10,15 @@ Portfolio React en francais, oriente candidature alternance (septembre 2026), av
 
 ## Structure
 
-- `index.html`: point d'entree Vite
+- `index.html`: point d'entrée Vite
 - `src/main.jsx`: bootstrap React
 - `src/App.jsx`: routes et composants UI
-- `src/data/projects.js`: donnees projets + competences
-- `src/styles.css`: theme developpeur (dark, sans gradients, accents couleur)
+- `src/data/projects.js`: données projets + compétences
+- `src/styles.css`: thème css
 - `public/assets`: images et documents statiques
 
 ## Scripts
 
 - `npm run dev`: lancer en local
 - `npm run build`: build de production
-- `npm run preview`: previsualiser le build
+- `npm run preview`: prévisualiser le build
