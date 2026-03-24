@@ -24,8 +24,3 @@ Portfolio React en francais, oriente candidature alternance (septembre 2026), av
 - `npm run dev`: lancer en local
 - `npm run build`: build de production
 - `npm run preview`: previsualiser le build
-
-## Notes
-
-- Version FR active (base EN prevue ensuite).
-- Les assets sont localises et servis depuis `public/assets`.
