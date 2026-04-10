@@ -17,7 +17,7 @@ import { useLanguage } from "./i18n/Context";
 const outlineBtn = 'border border-default-300/70';
 const assetBase = import.meta.env.BASE_URL;
 const cvUrl = `${assetBase}assets/docs/CV.pdf`;
-const portraitUrl = `${assetBase}assets/images/vsantos.jpg`;
+const portraitUrl = `${assetBase}assets/images/vsantos.png`;
 
 const skillFilters = [
   { key: "all", label: { fr: "Tout", en: "All" } },
@@ -88,12 +88,12 @@ const competencesData = [
 const educationItems = [
   {
     period: { fr: "09/2026 - 09/2029", en: "09/2026 - 09/2029" },
-    school: { fr: "ISEP", en: "ISEP" },
+    school: { fr: "ESIEE Paris", en: "ESIEE Paris" },
     location: { fr: "Paris", en: "Paris" },
-    degree: { fr: "Cycle Ingénieur ISEP", en: "ISEP Engineering Degree" },
+    degree: { fr: "Formation d'ingénieur \"Informatique et applications\"", en: "Engineering Degree \"Computer Science and Applications\"" },
     detail: { 
-      fr: "Admis en cycle ingénieur en apprentissage (1ère année). Recherche d'une alternance en développement informatique (3 ans) à partir de septembre 2026.",
-      en: "Admitted to the engineering apprenticeship cycle (1st year). Looking for a 3-year work-study program in software development starting September 2026."
+      fr: "Spécialisation : Ingénierie 3D et technologie des médias.",
+      en: "Specialization: 3D Engineering and Media Technology."
     },
     status: { fr: "À venir", en: "Upcoming" },
   },
@@ -208,8 +208,8 @@ function Hero() {
               </h1>
               <p className="max-w-2xl text-default-500">
                 {lang === 'fr' 
-                  ? "Actuellement en 3ème année de BUT Informatique à l'IUT de Marne-la-Vallée, je recherche activement une alternance en développement. Basé en Île-de-France (Lognes) avec mobilité vers IDF ou Reims." 
-                  : "Currently in my 3rd year of a Bachelor's in Computer Science at IUT Marne-la-Vallée, actively seeking a work-study program in development. Based in the Paris region (Lognes) with mobility to IDF or Reims."}
+                  ? "Actuellement en 3ème année de BUT Informatique à l'IUT de Marne-la-Vallée, je recherche activement une alternance de 36 mois pour mon diplôme d'ingénieur ESIEE Paris en Informatique et applications. Basé en Île-de-France (Lognes) avec mobilité vers IDF ou Reims." 
+                  : "Currently in my 3rd year of a Bachelor's in Computer Science at IUT Marne-la-Vallée, actively seeking a 36-month apprenticeship for my ESIEE Paris engineering degree in Computer Science and Applications. Based in the Paris region (Lognes) with mobility to IDF or Reims."}
               </p>
               <div className="flex flex-wrap gap-2">
                 <Button as={Link} to="/projects" color="primary" radius="sm" className={outlineBtn}>
@@ -222,7 +222,7 @@ function Hero() {
             </div>
 
             <img
-              className="mx-auto h-full max-h-[160px] w-full max-w-[160px] rounded-medium border border-default-200 object-cover"
+              className="mx-auto w-full max-w-[170px] rounded-medium border border-default-200 object-cover object-top md:max-w-[190px]"
               src={portraitUrl}
               alt="Victor Santos"
             />
@@ -249,8 +249,8 @@ function AlternanceSection() {
           </div>
           <p className="text-default-500">
             {lang === 'fr' 
-              ? "Je recherche une alternance pour mon école d'ingénieur informatique à partir de septembre 2026. Basé en Île-de-France (Lognes), mobile sur l'IDF et Reims."
-              : "I am looking for an apprenticeship for my computer engineering school starting September 2026. Based in the Paris region (Lognes), mobile across IDF and Reims."}
+              ? "Je recherche une alternance de 36 mois pour mon diplôme d'ingénieur ESIEE Paris en Informatique et applications, à partir de septembre 2026. Basé en Île-de-France (Lognes), mobile sur l'IDF et Reims."
+              : "I am looking for a 36-month apprenticeship for my ESIEE Paris engineering degree in Computer Science and Applications, starting September 2026. Based in the Paris region (Lognes), mobile across IDF and Reims."}
           </p>
         </CardBody>
       </Card>

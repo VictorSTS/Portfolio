@@ -3,7 +3,7 @@ export const en = {
   navContact: "Contact",
   navCV: "Download CV",
   heroSubtitle: "Fullstack Developer",
-  heroDescription: "Computer Science student passionate about web and software development. Looking for a 3-year apprenticeship for an engineering degree starting September 2026.",
+  heroDescription: "Computer Science student passionate about web and software development. Looking for a 36-month apprenticeship for my ESIEE Paris engineering degree in Computer Science and Applications starting September 2026.",
   aboutTitle: "About Me",
   aboutText: "I've been passionate about computer science since a young age...",
   skillsTitle: "My Skills",

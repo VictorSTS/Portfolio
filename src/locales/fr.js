@@ -3,7 +3,7 @@ export const fr = {
   navContact: "Contact",
   navCV: "Télécharger CV",
   heroSubtitle: "Développeur Fullstack",
-  heroDescription: "Étudiant en BUT Informatique passionné par le développement web et logiciel. À la recherche d'une alternance de 3 ans en cycle ingénieur à partir de septembre 2026.",
+  heroDescription: "Étudiant en BUT Informatique passionné par le développement web et logiciel. À la recherche d'une alternance de 36 mois pour mon diplôme d'ingénieur ESIEE Paris en Informatique et applications à partir de septembre 2026.",
   aboutTitle: "À propos de moi",
   aboutText: "Je suis passionné par l'informatique depuis mon plus jeune âge...",
   skillsTitle: "Mes Compétences",
